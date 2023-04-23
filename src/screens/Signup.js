@@ -45,13 +45,13 @@ export default function Signup() {
     setcredentials({ ...credentials, [event.target.name]: event.target.value });
   };
   return (
-    <div style={{ backgroundImage: 'url("https://cdn.shopify.com/s/files/1/0070/7032/files/food-photgraphy-tips.png?format=jpg&quality=90&v=1657891849")', backgroundSize: 'cover',height: '100vh' }}>
+    <div style={{ backgroundImage: 'url("https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', backgroundSize: 'cover',height: '100vh' }}>
       <div>
       <Navbar />
       </div>
 
         <div className='container' >
-          <form className='w-50 m-auto mt-5 border bg-dark text-light border-success rounded' onSubmit={handleSubmit}>
+          <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
             <div className="m-3">
               <label htmlFor="name" className="form-label">Name</label>
               <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
@@ -60,59 +60,15 @@ export default function Signup() {
               <label htmlFor="email" className="form-label">Email address</label>
               <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
             </div>
-            <div className="m-3">
+            {/* <div className="m-3">
               <label htmlFor="address" className="form-label">Address</label>
               <fieldset>
                 <input type="text" className="form-control" name='address' placeholder='"Click below for fetching address"' value={credentials.geolocation} onChange={(e)=>onChange(e.target.value)} aria-describedby="emailHelp" />
               </fieldset>
-            </div>
-            <div className="m-3">
-              <button type="button" onClick={ <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80")', backgroundSize: 'cover',height: '100vh' }}>
-      <div>
-      <Navbar />
-      </div>
-
-        <div className='container' >
-          <form className='w-50 m-auto mt-5 border bg-dark text-light border-success rounded' onSubmit={handleSubmit}>
-            <div className="m-3">
-              <label htmlFor="name" className="form-label" >Name</label>
-              <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
-            </div>
-            <div className="m-3">
-              <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
-            </div>
-            <div className="m-3">
-              <label htmlFor="address" className="form-label">Address</label>
-              <fieldset>
-                <input type="text" className="form-control" name='address' placeholder='"Click below for fetching address"' value={credentials.geolocation} onChange={(e)=>onChange(e.target.value)} aria-describedby="emailHelp" />
-              </fieldset>
-            </div>
-            <div className="m-3">
-              <button type="button" onClick={ <div style={{ backgroundImage: 'url("https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', backgroundSize: 'cover',height: '100vh' }}>
-      <div>
-      <Navbar />
-      </div>
-
-        <div className='container' >
-          <form className='w-50 m-auto mt-5 border bg-dark  border-success rounded' onSubmit={handleSubmit}>
-            <div className="m-3">
-              <label htmlFor="name" className="form-label">Name</label>
-              <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
-            </div>
-            <div className="m-3">
-              <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
-            </div>
-            <div className="m-3">
-              <label htmlFor="address" className="form-label">Address</label>
-              <fieldset>
-                <input type="text" className="form-control" name='address' placeholder='"Click below for fetching address"' value={credentials.geolocation} onChange={(e)=>onChange(e.target.value)} aria-describedby="emailHelp" />
-              </fieldset>
-            </div>
-            <div className="m-3">
-              <button type="button" onClick={handleSubmit} name="geolocation" className=" btn btn-success">Click for current Location </button>
-            </div>
+            </div> */}
+            {/* <div className="m-3">
+              <button type="button" onClick={handleClick} name="geolocation" className=" btn btn-success">Click for current Location </button>
+            </div> */}
             <div className="m-3">
               <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
               <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
@@ -121,27 +77,6 @@ export default function Signup() {
             <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
           </form>
         </div>
-      </div>} name="geolocation" className=" btn btn-success">Click for current Location </button>
-            </div>
-            <div className="m-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-              <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
-            </div>
-            <button type="submit" className="m-3 btn btn-success">Submit</button>
-            <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
-          </form>
-        </div>
-      </div>} name="geolocation" className=" btn btn-success">Click for current Location </button>
-            </div>
-            <div className="m-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-              <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
-            </div>
-            <button type="submit" className="m-3 btn btn-success">Submit</button>
-            
-            <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
-          </form>
-        </div>
-      </div>
-  );
+      </div>
+  )
 }
